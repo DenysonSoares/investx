@@ -1,10 +1,11 @@
 import { Disclosure, DisclosureButton } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import MenuNavigation from '../MenuNavigation'
-import Logo from '../Logo'
+
+import MenuNavigation from '../MenuNavigation/MenuNavigation'
+import Logo from '../Logo/Logo'
 import ProfileMenu from '../ProfileMenu'
 import NotificationButton from '../NotificationButton'
-import MobileNavigation from '../MobileNavigation'
+import MobileNavigation from '../MobileNavigation/MobileNavigation'
 
 const Header = () => {
 
