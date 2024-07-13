@@ -1,8 +1,11 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import Header from "./components/common/Header";
-import { NavigationProvider } from "./contexts/NavigationsContext";
+import Header from "./components/common/Header/Header";
+import { NavigationProvider } from "./contexts/NavigationContext";
+import ModalInvestimento from "./components/customs/ModalInvestimento/ModalInvestimento";
+import TitlePage from "./components/common/TitlePage/TitlePage";
+import { InvestmentProvider } from "./contexts/InvestimentContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,22 +16,20 @@ export default function RootLayout({
 }>) {
   return (
     <NavigationProvider>
+      <InvestmentProvider>
       <html lang="en">
 
         <body className={inter.className}>
           <div className="min-h-full">
-            <Header></Header>
-            <header className="bg-white shadow">
-              <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <h1 className="text-3xl font-bold tracking-tight text-gray-900">Investimentos</h1>
-              </div>
-            </header>
+            <Header />
+            <TitlePage />
             <main>
               <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">{children}</div>
             </main>
           </div>
         </body>
       </html>
+      </InvestmentProvider>
     </NavigationProvider>
   );
 }

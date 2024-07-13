@@ -1,0 +1,9 @@
+.buttonModal{
+    color: #ffffff;
+    padding: 10px 30px;
+}
+.buttonCloseModal{
+    position: absolute;
+    top: 0;
+    right: 0;
+}

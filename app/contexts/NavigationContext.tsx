@@ -32,11 +32,7 @@ const defaultUser: User = {
 }
 
 const defaultNavigation: NavigationItem[] = [
-    { name: 'Meus investimentos', href: '#', current: true },
-    { name: 'Rendimentos', href: '#', current: false },
-    { name: 'Ativos', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
-    { name: 'Reports', href: '#', current: false },
+    { name: 'Meus investimentos', href: '/', current: true },
 ];
 
 const defaultUserNavigation: UserNavigationItem[] = [
@@ -60,7 +56,7 @@ interface NavigationContextType {
     setState: Dispatch<SetStateAction<NavigationContextState>>;
 }
 
-const NavigationContext = createContext<NavigationContextType | undefined>(undefined);
+export const NavigationContext = createContext<NavigationContextType | undefined>(undefined);
 
 export const NavigationProvider: React.FC<NavigationProviderProps> = ({ children }) => {
     const [state, setState] = useState<NavigationContextState>(defaultState);

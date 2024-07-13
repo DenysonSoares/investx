@@ -1,6 +1,6 @@
 "use client"
 
-import { useNavigationContext } from '@/app/contexts/NavigationsContext';
+import { useNavigationContext } from '../../../contexts/NavigationContext';
 import {  Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 
 const ProfileMenu = () => {

@@ -1,13 +1,12 @@
 "use client"
 
-import { useNavigationContext } from '@/app/contexts/NavigationsContext';
+import { useNavigationContext } from '../../../contexts/NavigationContext';
 import { DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { BellIcon } from '@heroicons/react/24/outline'
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
-
 
 const MobileNavigation = () => {
     const { state } = useNavigationContext();
